@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,400;0,600;1,300;1,400;1,600&family=Muli:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+	 
+	</head>
+	 <style>
+	 @import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
+*{
+padding : 0;
+margin :0;
+box-sizing :border-box;
+font-family:'Josefin Sans' ,sans serif;
+ background:#191919;
+ 
+}
+
+
+ 
+h3{
+  font-family: "Muli", serif;
+  font-size: 10rem;
+  font-weight: 500;
+  color: #eb0015;
+  margin-bottom: 1rem;
+}
+p{
+  font-family: "Baloo da 2", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+   
+  
+}
+ul{
+  font-family: "Baloo da 2", serif;
+  font-size: 2rem;
+  font-weight: 50;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+position: relative;
+  left: 30px;
+}
+
+form {
+	
+	display: flex;
+	flex-direction: column;
+	padding : 2vw 4vw;
+	width:90%;
+	max-width:600px;
+	border-radius: 10px;
+}
+
+form h1{
+	color:#fff;
+	font-weight: 800;
+	margin-bottom:20px;
+}
+.hero{
+	height: 100vh;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background: #191919;
+}
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 45px;
+	padding-left: 8%;
+	padding-right: 8%;
+}
+.logo{
+	color: white;
+	font-size: 35px;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+span{
+	color: #eb0015;
+}
+
+form input ,textarea{
+	background:#191919;
+   color:#fff;
+   font-size: 1.1rem;
+   margin-bottom: 0.7rem;
+   border-radius: 10px;
+}
+	
+@media (max-width: 1500px) {
+  .about-us-img-wrapper {
+    grid-row: 3 / -1;
+  }
+
+  
+
+  .contact-wrapper {
+    width: 80%;
+    height: 65rem;
+  }
+
+  .footer-content {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 45%;
+  }
+
+  .sidebar {
+    width: 100%;
+    right: -100%;
+  }
+
+  .change .hamburger-menu {
+    right: 38rem;
+  }
+
+  .service {
+    width: 30rem;
+  }
+
+  .footer {
+    height: 18rem;
+  }
+  .p{
+   text-align: center;
+   }
+}
+.footer {
+  width: 100%;
+  height: 15rem;
+  background-color: #17181b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright {
+  font-family: "Baloo Da 2", serif;
+  font-size: 1.6rem;
+  color: #a7a7a7;
+}
+
+.social-list a {
+  margin: 0 2rem;
+}
+
+.social-list i {
+  font-size: 2rem;
+  color: #a7a7a7;
+}
+span{
+	color: #eb0015;
+}
+.scroll-btn {
+  position: fixed;
+  right: 5rem;
+  bottom: 5rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: #eb0015;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+  box-shadow: 0 0.1rem 0.6rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+}
+
+ *, *:before, *:after {
+	 box-sizing: border-box;
+}
+
+ body {
+	 font-family: "Cutive Mono", serif;
+	 font-size: 1.2em;
+	 line-height: 1.6;
+	 background: #191919;
+	 overflow-x: hidden;
+	  text-align: center;
+}
+ label .menu {
+	 position: absolute;
+	 right: -100px;
+	 top: -100px;
+	 z-index: 100;
+	 width: 200px;
+	 height: 200px;
+	 background: #fff;
+	 border-radius: 50% 50% 50% 50%;
+	 transition: 0.5s ease-in-out;
+	 box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+	 cursor: pointer;
+}
+ label .hamburger {
+	 position: absolute;
+	 top: 135px;
+	 left: 50px;
+	 width: 30px;
+	 height: 2px;
+	 background: #eb0015;
+	 display: block;
+	 transform-origin: center;
+	 transition: 0.5s ease-in-out;
+}
+ label .hamburger:after, label .hamburger:before {
+	 transition: 0.5s ease-in-out;
+	 content: "";
+	 position: absolute;
+	 display: block;
+	 width: 100%;
+	 height: 100%;
+	 background: #000;
+}
+ label .hamburger:before {
+	 top: -10px;
+}
+ label .hamburger:after {
+	 bottom: -10px;
+}
+ label input {
+	 display: none;
+}
+ label input:checked + .menu {
+	 box-shadow: 0 0 0 100vw #191919, 0 0 0 100vh #191919;
+	 border-radius: 0;
+}
+ label input:checked + .menu .hamburger {
+	 transform: rotate(45deg);
+}
+ label input:checked + .menu .hamburger:after {
+	 transform: rotate(90deg);
+	 bottom: 0;
+}
+ label input:checked + .menu .hamburger:before {
+	 transform: rotate(90deg);
+	 top: 0;
+}
+ label input:checked + .menu + ul {
+	 opacity: 1;
+}
+ label ul {
+	 z-index: 200;
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 opacity: 0;
+	 transition: 0.25s 0s ease-in-out;
+}
+ label a {
+	 margin-bottom: 1em;
+	 display: block;
+	 color: #fff;
+	 text-decoration: none;
+}
+h1{
+font-family: "Baloo da 2", serif;
+  font-size: 2rem;
+  font-weight: 50;
+  color: #FFFFFF;
+}
+
+</style>
+<body>
+<label>
+  <input type="checkbox"></input>
+  <span class="menu">
+    <span class="hamburger"></span>
+  </span>
+  <ul>
+    
+		 <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>
+      <a href="contactus.html">Contact us</a>
+    </li>
+	<li>
+      <a href="aboutus.html">About us</a>
+    </li><li>
+      <a href="registration.html">Register</a>
+    </li><li>
+      <a href="login.html">Login</a>
+    </li><li>
+      <a href="fp.html">Food Safety Policy</a>
+    </li>
+	<li>
+      <a href="faq.html">FAQ</a>
+    </li>
+  </ul>
+</label>
+       <div class="hero">
+		<nav>
+		
+			<h2 class="logo">About<span>Us</span></h2>
+			</nav>
+
+              <h3>History</h3>
+			
+            <h1>
+              Horra Foods is the largest food industy in ethiopia that produces  Wheat flour ,Pasta Macaroni and Biscuits.Completed in 2012 GC This complex houses a pasta and hard cookies production plants, plus ancillary facilities, site works and utilities distribution over a site of circa 7000m2 south-west of Addis Ababa.The project took 36 months to complete.
+            </h1>
+			
+			 <h3>Products</h3>
+		<ul>
+			     <li>Horra Wheat Flour</li>
+			 <li>Suprema Pasta</li>
+			 <li>Suprema Macaroni</li>
+			 <li>King Biscuits</li>
+			 </ul>
+		    <footer class="footer">
+        <div class="footer-content">
+          <p class="copyright">
+           Address: Daleti Area,Oromia Region,Ethiopia<br>
+		Phone:(+251) 113679000/53/41<br>
+		Email: hfc@ethionet.net<br>
+		POBOX: 5521
+          <div class="social-list">
+            <a href="https://www.facebook.com/HorraFoodComplex/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://goo.gl/maps/qQbbcjwu66fpK3DP7"><i class="fab fa-dribbble"></i></a>
+          </div>
+        </div>
+      </footer>
+	   
+			</body>
+	  </html>

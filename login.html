@@ -1,0 +1,513 @@
+<html>
+<head>
+ <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://kit.fontawesome.com/fac982b9d0.js" crossorigin="anonymous"></script>
+<title>Login Form</title>
+</head>
+ <style>
+ <style>
+ @import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
+*{
+padding : 0;
+margin :0;
+box-sizing :border-box;
+font-family:'Josefin Sans' ,sans serif;
+}
+
+
+
+.container{
+
+
+  background-color: #191919;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+  z-index: 300;
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+
+form {
+	
+	display: flex;
+	flex-direction: column;
+	padding : 2vw 4vw;
+	width:90%;
+	max-width:600px;
+	border-radius: 10px;
+}
+
+form h1{
+	color:#fff;
+	font-weight: 800;
+	margin-bottom:20px;
+}
+form input ,textarea{
+	background:#fff;
+   color:#fff;
+   font-size: 1.1rem;
+   margin-bottom: 0.7rem;
+   border-radius: 10px;
+}
+form button {
+	padding:15px;
+	
+	display:inline-block;
+	   background:#eb0015;
+	   color:#fff;
+	   font-size:1.1rem;
+	   letter-spacing : 1px;
+	   text-transform: uppercase;
+	   font-weight:600;
+	   border: 2px solid transparent;
+	   border-radius: 20px;
+	   width:150px;
+	   margin:20px auto 0;
+	   transition : ease .20s;
+	   cursor: pointer;
+}
+.footer-content {
+    width: 80%;
+  }
+  .footer-content {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer {
+  width: 100%;
+  height: 15rem;
+  background-color: #17181b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+  }
+   .footer {
+    height: 18rem;
+  }
+  .social-list a {
+  margin: 0 2rem;
+}
+
+.social-list i {
+  font-size: 2rem;
+  color: white;
+}
+.social-media {
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.social-media i {
+  font-size: 2.2rem;
+  margin: 3rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: #777;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.social-media i:hover {
+  background-color: #eb0015;
+}
+.copyright {
+  font-family: "Baloo Da 2", serif;
+  font-size: 1.6rem;
+  color: #a7a7a7;
+}
+.hero{
+	height: 100vh;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background: #;
+}
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 45px;
+	padding-left: 8%;
+	padding-right: 8%;
+}
+.logo{
+	color: white;
+	font-size: 35px;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+span{
+	color: #eb0015;
+}
+@media (max-width: 1300px) {
+  .team {
+    padding-bottom: 5rem;
+  }
+
+  .cards-wrapper {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+  }
+
+  .card {
+    margin-bottom: 8rem;
+  }
+
+  .contact-wrapper {
+    width: 90%;
+    height: 55rem;
+  }
+
+  .contact-heading {
+    margin-bottom: 2rem;
+  }
+
+  .field {
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .banner h1 {
+    font-size: 5rem;
+    line-height: 6rem;
+  }
+
+  .banner p {
+    font-size: 2.5rem;
+  }
+
+  .banner button {
+    width: 18rem;
+    height: 4rem;
+    font-size: 1.5rem;
+  }
+
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 40rem;
+    margin-bottom: 6rem;
+  }
+
+  .about-us-img-wrapper {
+    width: 40rem;
+  }
+
+  .about-us-img-wrapper img {
+    width: 100%;
+  }
+
+  .contact-left {
+    width: 0;
+  }
+
+  .contact-right {
+    width: 100%;
+  }
+
+  .field {
+    width: 55rem;
+  }
+
+  .input-group textarea {
+    max-width: 55rem;
+  }
+
+  .submit-btn {
+    width: 55rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+  }
+
+  .copyright {
+    order: 1;
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .banner h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  .banner p {
+    font-size: 2rem;
+  }
+
+  .field {
+    width: 35rem;
+  }
+
+  .input-group textarea {
+    max-width: 35rem;
+  }
+
+  .submit-btn {
+    width: 35rem;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 45%;
+  }
+
+  .sidebar {
+    width: 100%;
+    right: -100%;
+  }
+
+  .change .hamburger-menu {
+    right: 38rem;
+  }
+
+  .service {
+    width: 30rem;
+  }
+
+  .footer {
+    height: 18rem;
+  }
+}
+ *, *:before, *:after {
+	 box-sizing: border-box;
+}
+ body {
+	 font-family: "Cutive Mono", serif;
+	 font-size: 1.2em;
+	 line-height: 1.6;
+	 background: #191919;
+	 overflow-x: hidden;
+	  text-align: center;
+}
+ label .menu {
+	 position: absolute;
+	 right: -100px;
+	 top: -100px;
+	 z-index: 100;
+	 width: 200px;
+	 height: 200px;
+	 background: #fff;
+	 border-radius: 50% 50% 50% 50%;
+	 transition: 0.5s ease-in-out;
+	 box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+	 cursor: pointer;
+}
+ label .hamburger {
+	 position: absolute;
+	 top: 135px;
+	 left: 50px;
+	 width: 30px;
+	 height: 2px;
+	 background: #eb0015;
+	 display: block;
+	 transform-origin: center;
+	 transition: 0.5s ease-in-out;
+}
+ label .hamburger:after, label .hamburger:before {
+	 transition: 0.5s ease-in-out;
+	 content: "";
+	 position: absolute;
+	 display: block;
+	 width: 100%;
+	 height: 100%;
+	 background: #000;
+}
+ label .hamburger:before {
+	 top: -10px;
+}
+ label .hamburger:after {
+	 bottom: -10px;
+}
+ label input {
+	 display: none;
+}
+ label input:checked + .menu {
+	 box-shadow: 0 0 0 100vw #191919, 0 0 0 100vh #191919;
+	 border-radius: 0;
+}
+ label input:checked + .menu .hamburger {
+	 transform: rotate(45deg);
+}
+ label input:checked + .menu .hamburger:after {
+	 transform: rotate(90deg);
+	 bottom: 0;
+}
+ label input:checked + .menu .hamburger:before {
+	 transform: rotate(90deg);
+	 top: 0;
+}
+ label input:checked + .menu + ul {
+	 opacity: 1;
+}
+ label ul {
+	 z-index: 200;
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 opacity: 0;
+	 transition: 0.25s 0s ease-in-out;
+}
+ label a {
+	 margin-bottom: 1em;
+	 display: block;
+	 color: #fff;
+	 text-decoration: none;
+}
+ h1 {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 width: 80%;
+	 text-align: center;
+}
+
+.footer {
+  width: 108%;
+  height: 15rem;
+  background-color: #17181b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright {
+  font-family: "Baloo Da 2", serif;
+  font-size: 1.6rem;
+  color: #a7a7a7;
+}
+
+.social-list a {
+  margin: 0 2rem;
+}
+
+.social-list i {
+  font-size: 2rem;
+  color: #a7a7a7;
+}
+
+</style>
+<body>
+
+<label>
+  <input type="checkbox"></input>
+  <span class="menu">
+    <span class="hamburger"></span>
+  </span>
+  <ul>
+	 	 <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>
+      <a href="contactus.html">Contact us</a>
+    </li>
+	<li>
+      <a href="aboutus.html">About us</a>
+    </li><li>
+      <a href="registration.html">Register</a>
+    </li><li>
+      <a href="login.html">Login</a>
+    </li><li>
+      <a href="fp.html">Food Safety Policy</a>
+    </li>
+	<li>
+      <a href="faq.html">FAQ</a>
+    </li>
+  </ul>
+</label>
+ <div class="container">
+    <div class="content">
+<div class="hero">
+		
+			<h2 class="logo"><span>Please login</span></h2>
+	
+			
+<div class="container">
+    <form method="post" action="login.php" class="form-signin" >       
+      <input type="text" class="form-control" name="fn" placeholder="First name" title="Name should have 3 and more charcters." pattern="[A-Za-z]{2,}" required="" autofocus="" /><br>
+	  <input type="text" class="form-control" name="ln" placeholder="Last name" title="Name should have 3 and more charcters." pattern="[A-Za-z]{2,}" required="" autofocus="" /><br>
+      <input type="password" class="form-control" name="psw" placeholder="Password" pattern=".{6,15}" required=""/>      <br>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" value="Login" name="login">Login</button> 
+	  <button class="btn btn-lg btn-primary btn-block" type="submit" value="Signup" onClick= "parent.location= 'registration.html'" name="signup">Signup</button> 
+     
+	</form>
+  </div>
+  
+  </div>
+  </div>
+</form>
+
+ <footer class="footer">
+
+        <div class="footer-content">
+          <p class="copyright">
+           Address: Daleti Area,Oromia Region,Ethiopia<br>
+		Phone:(+251) 113679000/53/41<br>
+		Email: hfc@ethionet.net<br>
+		POBOX: 5521
+          <div class="social-list">
+            <a href="https://www.facebook.com/HorraFoodComplex/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://goo.gl/maps/qQbbcjwu66fpK3DP7"><i class="fab fa-dribbble"></i></a>
+          </div>
+        </div>
+      </footer>
+      <a href="#" class="scroll-btn">
+        <i class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+</body>
+</html>

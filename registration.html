@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://kit.fontawesome.com/fac982b9d0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <style>
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
+ *, *:before, *:after {
+	 box-sizing: border-box;
+}
+ html {
+	 font-size: 18px;
+}
+ body {
+	 font-family: "Cutive Mono", serif;
+	 font-size: 1.2em;
+	 line-height: 1.6;
+	 background: #ccc;
+	 overflow-x: hidden;
+	 height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: #191919;
+ 
+}
+.container{
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three,{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: #eb0015;
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: #eb0015;
+  }
+  label .menu {
+	 position: absolute;
+	 right: -100px;
+	 top: -100px;
+	 z-index: 100;
+	 width: 200px;
+	 height: 200px;
+	 background: #fff;
+	 border-radius: 50% 50% 50% 50%;
+	 transition: 0.5s ease-in-out;
+	 box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+	 cursor: pointer;
+}
+ label .hamburger {
+	 position: absolute;
+	 top: 135px;
+	 left: 50px;
+	 width: 30px;
+	 height: 2px;
+	 background: #eb0015;
+	 display: block;
+	 transform-origin: center;
+	 transition: 0.5s ease-in-out;
+}
+ label .hamburger:after, label .hamburger:before {
+	 transition: 0.5s ease-in-out;
+	 content: "";
+	 position: absolute;
+	 display: block;
+	 width: 100%;
+	 height: 100%;
+	 background: #000;
+}
+ label .hamburger:before {
+	 top: -10px;
+}
+ label .hamburger:after {
+	 bottom: -10px;
+}
+ label input {
+	 display: none;
+}
+ label input:checked + .menu {
+	 box-shadow: 0 0 0 100vw #191919, 0 0 0 100vh #191919;
+	 border-radius: 0;
+}
+ label input:checked + .menu .hamburger {
+	 transform: rotate(45deg);
+}
+ label input:checked + .menu .hamburger:after {
+	 transform: rotate(90deg);
+	 bottom: 0;
+}
+ label input:checked + .menu .hamburger:before {
+	 transform: rotate(90deg);
+	 top: 0;
+}
+ label input:checked + .menu + ul {
+	 opacity: 1;
+}
+ label ul {
+	 z-index: 200;
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 opacity: 0;
+	 transition: 0.25s 0s ease-in-out;
+}
+ label a {
+	 margin-bottom: 1em;
+	 display: block;
+	 color: #fff;
+	 text-decoration: none;
+}
+ h1 {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 width: 80%;
+	 text-align: center;
+}
+
+.footer-content {
+    width: 80%;
+  }
+  .footer-content {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer {
+  width: 100%;
+  height: 15rem;
+  background-color: #17181b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+  }
+   .footer {
+    height: 18rem;
+  }
+  .social-list a {
+  margin: 0 2rem;
+}
+
+.social-list i {
+  font-size: 2rem;
+  color: white;
+}
+.social-media {
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.social-media i {
+  font-size: 2.2rem;
+  margin: 3rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: #777;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.social-media i:hover {
+  background-color: #eb0015;
+}
+.copyright {
+  font-family: "Baloo Da 2", serif;
+  font-size: 1.6rem;
+  color: #a7a7a7;
+}
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
+
+   </style>
+<body>
+<label>
+  <input type="checkbox"></input>
+  <span class="menu">
+    <span class="hamburger"></span>
+  </span>
+  <ul>
+    	 <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>
+      <a href="contactus.html">Contact us</a>
+    </li>
+	<li>
+      <a href="aboutus.html">About us</a>
+    </li><li>
+      <a href="registration.html">Register</a>
+    </li><li>
+      <a href="login.html">Login</a>
+    </li><li>
+      <a href="fp.html">Food Safety Policy</a>
+    </li>
+	<li>
+      <a href="faq.html">FAQ</a>
+    </li>
+  </ul>
+</label>
+  <div class="container">
+    
+    <div class="content">
+      <form method="post" action="login.php" >    
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" name="First_Name" placeholder="Enter First name" pattern="[A-Za-z]{2,}" required >
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" name="Last_Name" placeholder="Enter last name" pattern="[A-Za-z]{2,}" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" id="email_ID" name="email_ID" placeholder="example@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="25" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="tel" placeholder="Enter phone number" name="Phone" title="phone number must start with 09..." pattern="[0][9][0-9]{8}" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" placeholder="6 upto 15 characters" title="password should be 6 upto 15 characters." id="pass" name="pass" pattern=".{6,15}" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" placeholder="Confirm your password" id="cpass" name="cpass" required>
+          </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="Gender"  value="M"> 
+          <input type="radio" name="Gender" value="F">
+         
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" name="submit" value="Submit">
+        </div>
+      </form>
+	  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Horra foods registration 
+	  
+  </div>
+</div>
+ <footer class="footer">
+        <div class="footer-content">
+          <p class="copyright">
+           Address: Daleti Area,Oromia Region,Ethiopia<br>
+		Phone:(+251) 113679000/53/41<br>
+		Email: hfc@ethionet.net<br>
+		POBOX: 5521
+          <div class="social-list">
+            <a href="https://www.facebook.com/HorraFoodComplex/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://goo.gl/maps/qQbbcjwu66fpK3DP7"><i class="fab fa-dribbble"></i></a>
+          </div>
+        </div>
+      </footer>
+      <a href="#" class="scroll-btn">
+        <i class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+</body>
+</html>
