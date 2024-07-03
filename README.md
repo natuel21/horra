@@ -14,6 +14,10 @@ Key features of the website include:
 - Contact form for customers to reach the Horra Foods team directly
   ## Screenshots
   ![Horra Foods Factory Website Homepage](index1.jpg)
+  ![Horra Foods Factory Website Homepage](index2.jpg)
+  ![Horra Foods Factory Website login](login.jpg)
+  ![Horra Foods Factory Website signup](sign.jpg)
+  ![Horra Foods Factory Website contact](contact.jpg)
 
 ## Technologies Used
 - HTML
