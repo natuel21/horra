@@ -12,6 +12,8 @@ Key features of the website include:
 - Information about the Horra Foods manufacturing facility and commitment to quality
 - Frequently Asked Questions (FAQ) section to address common customer queries
 - Contact form for customers to reach the Horra Foods team directly
+  ## Screenshots
+  ![Horra Foods Factory Website Homepage](index.jpg)
 
 ## Technologies Used
 - HTML
